@@ -35,6 +35,7 @@ jobs:
       - name: Rename files
         run: |
           mv -f mini/*.iso vanilladpup-11.0.${{ github.run_number }}-mini.iso
+          mv -f mini/woof-CE.tar.gz woof-CE-mini.tar.gz
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
