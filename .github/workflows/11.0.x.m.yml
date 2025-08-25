@@ -34,8 +34,11 @@ jobs:
           path: mini
       - name: Rename files
         run: |
-          mv -f mini/*.iso vanilladpup-11.0.${{ github.run_number }}-mini.iso
-          mv -f mini/woof-CE.tar.gz woof-CE-mini.tar.gz
+          for x in mini; do
+              mv -f $x/*-bios.img.gz vanilladpup-11.0.${{ github.run_number }}-$x-bios.img.gz || exit 1
+              mv -f $x/*-uefi.img.gz vanilladpup-11.0.${{ github.run_number }}-$x-uefi.img.gz || exit 1
+              mv -f $x/woof-CE.tar.gz woof-CE-$x.tar.gz || exit 1
+          done
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
@@ -43,7 +46,7 @@ jobs:
           tag_name: vanilladpup-x86_64-11.0.${{ github.run_number }}
           fail_on_unmatched_files: true
           files: |
-            *.iso
+            *.img.gz
             woof-CE-*.tar.gz
   cleanup:
     needs: [upload]
