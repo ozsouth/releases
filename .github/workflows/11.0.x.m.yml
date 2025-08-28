@@ -35,7 +35,6 @@ jobs:
       - name: Rename files
         run: |
           for x in mini; do
-              mv -f $x/*-bios.img.gz vanilladpup-11.0.${{ github.run_number }}-$x-bios.img.gz || exit 1
               mv -f $x/*-uefi.img.gz vanilladpup-11.0.${{ github.run_number }}-$x-uefi.img.gz || exit 1
               mv -f $x/woof-CE.tar.gz woof-CE-$x.tar.gz || exit 1
           done
