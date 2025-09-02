@@ -1,8 +1,8 @@
 name: 9.3.x
 
-#on:
-  #schedule:
-    #- cron: '0 0 1 * *'
+on:
+  schedule:
+    - cron: '0 0 1 8 *'
   #workflow_dispatch:
     #branches:
       #- master
