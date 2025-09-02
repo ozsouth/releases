@@ -2,7 +2,7 @@ name: 10.0.x64
 
 on:
   schedule:
-    - cron: '0 0 2 * *'
+    - cron: '0 0 1 8 *'
   workflow_dispatch:
     branches:
       - master
