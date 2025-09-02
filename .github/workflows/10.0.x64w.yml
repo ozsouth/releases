@@ -1,9 +1,9 @@
 name: 10.0.x64w
 
-on:
-  workflow_dispatch:
-    branches:
-      - master
+#on:
+  #workflow_dispatch:
+    #branches:
+      #- master
 
 jobs:
   xwayland64:
