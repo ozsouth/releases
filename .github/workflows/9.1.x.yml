@@ -1,11 +1,11 @@
 name: 9.1.x
 
-on:
-  schedule:
-    - cron: '0 0 * * SAT'
-  workflow_dispatch:
-    branches:
-      - master
+#on:
+  #schedule:
+    #- cron: '0 0 * * SAT'
+  #workflow_dispatch:
+    #branches:
+      #- master
 
 jobs:
   build:
