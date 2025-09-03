@@ -18,7 +18,7 @@ jobs:
       kernel: debian-bookworm
       prefix: vanilladpup
       artifact: vanilladpup-x86_64-10.0.${{ github.run_number }}-xorg
-      retention: 1
+      retention: 16
       variant: xorg
   xwayland64:
     uses: vanilla-dpup/woof-CE/.github/workflows/build.yml@vanilladpup-10.0.x
@@ -33,7 +33,7 @@ jobs:
       kernel: debian-bookworm
       prefix: vanilladpup
       artifact: vanilladpup-x86_64-10.0.${{ github.run_number }}-xwayland
-      retention: 1
+      retention: 16
       variant: xwayland
   upload64:
     needs: [xorg64, xwayland64]
