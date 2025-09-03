@@ -18,7 +18,7 @@ jobs:
       kernel: debian-testing
       prefix: vanilladpup
       artifact: vanilladpup-x86_64-11.0.${{ github.run_number }}-full
-      retention: 1
+      retention: 16
   mini:
     uses: vanilla-dpup/woof-CE/.github/workflows/build.yml@vanilladpup-11.0.x
     with:
