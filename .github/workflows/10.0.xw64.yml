@@ -41,7 +41,6 @@ jobs:
           fail_on_unmatched_files: true
           files: |
             *.iso
-            xorg/kernel_sources-*.sfs
   cleanup:
     needs: [upload64]
     runs-on: ubuntu-22.04
